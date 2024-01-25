@@ -1,0 +1,101 @@
+.nav{
+    width: 100%;
+    height: 10%;
+    background-image: linear-gradient(135deg,rgba($color-primary, .85) 0%,rgba(46, 0, 107,.85) 100%);
+    position: fixed;
+    padding: 3rem;
+    display: flex;
+align-items: center;
+justify-content: space-between;
+transition: all .2s ease-in-out;
+z-index: 10;
+box-shadow: $shadow--nav;
+
+&__logo-box{
+    width: 11%;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .2s ease-in-out;
+   }
+   
+   &__logo{
+       width: 6rem;
+   }
+   
+   &__topbar{
+       width: 40%;
+       display: flex;
+       font-size: 2rem;
+       align-items: center;
+       justify-content: space-between;
+       
+       
+       
+       &--list{
+           width: 80%;
+           display: flex;
+           justify-content: space-between;
+           padding: 0 4rem;
+           list-style: none;
+   
+       }
+       
+       &--list a{
+           text-decoration: none;
+           color: inherit;
+           transition: all .3s ease-in-out;
+       }
+       
+       
+   
+       &--list li a:active{
+           color: $color-secondary;
+       }
+      
+       &--list li{
+           position: relative;
+           
+           
+       }
+       &--list li::before{
+           
+               content: "";
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               height: .3rem;
+               width: 3px;
+               background-color: $color-secondary;
+               transform: scaleY(0);
+               transition: transform .2s,
+                           width .4s cubic-bezier(1,0,0,1) .2s,
+                           background-color .1s;
+               
+       }
+       
+       &--list li:hover::before,
+       &--list li:active::before {
+               transform: scaleY(1);
+               width: 100%;
+           }
+       
+      &--list li:active::before {
+               background-color: $color-secondary;
+           }
+   
+        }
+}
+
+.nav.active{
+    background-image: linear-gradient(135deg,$color-secondary-light 0%,rgb(255,255,255) 100%);
+    color: $color-primary;
+    padding: 2rem 3rem;
+    transition: all .2s ease-in-out;
+    
+}
+
+        
+
+

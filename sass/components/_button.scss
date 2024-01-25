@@ -1,0 +1,43 @@
+.btn{
+    width: 13rem;
+    border-radius: 1rem;
+    background-color: $color-secondary;
+    border: none;
+    scale: 1;
+    padding: .8rem 1rem;
+    cursor: pointer;
+    transition: all .2s;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    box-shadow: $shadow--natural;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+    &:hover{
+        scale: 1.1;
+        background-color: rgba($color-secondary, 0.8);
+    }
+
+    &__lm{
+     padding: 2rem;
+     font-size: 1.5rem;
+    }
+   }
+
+   .btn svg{
+    fill: aliceblue;
+   }
+
+   .btn a{
+    text-decoration: none;
+    color: inherit;
+   }

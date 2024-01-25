@@ -1,5 +1,12 @@
 @import "base";
-@import "layout";
-@import "components";
+@import "layout/layout_projects";
 @import "typography";
-@import "contact";
+@import "layout/contact";
+@import "layout/navigation";
+@import "layout/about";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/cards";
+@import "components/form";
+@import "components/card";
+@import "components/button";
