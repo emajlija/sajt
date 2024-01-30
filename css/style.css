@@ -18,6 +18,9 @@ body {
   color: #676767;
   box-sizing: border-box; }
 
+.hidden {
+  display: none; }
+
 .btn {
   padding: 1rem; }
 
@@ -182,6 +185,10 @@ body {
   color: #00143d;
   padding: 2rem 3rem;
   transition: all .2s ease-in-out; }
+
+#language-select {
+  margin-left: 2rem;
+  border-radius: .6rem; }
 
 .composition {
   margin-top: -20%;
