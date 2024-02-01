@@ -12,6 +12,10 @@
         $color-secondary-light 100%,
         ),
         url(../img/5001147_19742.svg);
+
+        @media only screen and (max-width:37.5em){
+            height: 70vh;
+        }
     
     }
     .about .heading-big{

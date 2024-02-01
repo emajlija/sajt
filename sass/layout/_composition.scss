@@ -16,16 +16,28 @@
         &--p1 {
             left: 0;
             top: -2rem;
+
+            @media only screen and (max-width:37.5em){
+                top: 28rem;
+            }
         }
 
         &--p2 {
             right: 0;
             top: 2rem;
+
+            @media only screen and (max-width:37.5em){
+                top: 32rem;
+            }
         }
 
         &--p3 {
             left: 20%;
             top: 10rem;
+
+            @media only screen and (max-width:37.5em){
+                top: 40rem;
+            }
         }
 
         &:hover {

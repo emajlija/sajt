@@ -34,11 +34,19 @@
             justify-content: center;
             align-items: center;
 
+            @media only screen and (max-width:37.5em){
+                width: 80%;
+            }
+
             &__small{
                 font-size: 1.7rem;
                 letter-spacing: 1.5px;
                 width: 58%;
                 text-align: center;
+
+                @media only screen and (max-width:37.5em){
+                    width: 65%;
+                }
             }
     
             &__medium{

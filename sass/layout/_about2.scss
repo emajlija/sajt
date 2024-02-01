@@ -12,11 +12,24 @@
 
     background-size: cover;
 
+    @media only screen and (max-width:37.5em){
+       flex-direction: column;
+    height: 80vh;
+       justify-content: flex-start;
+       padding-top: 10rem;
+    }
+
     &__text{
         width: 35%;
         margin-right: 4rem;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width:37.5em){
+           width: 75%;
+           text-align: center;
+        
+        }
     }
 
    
