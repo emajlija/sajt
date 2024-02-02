@@ -212,17 +212,22 @@ body {
     z-index: 10;
     transition: all .2s;
     outline-offset: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .composition__photo {
+        width: 70%; } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
       @media only screen and (max-width: 37.5em) {
         .composition__photo--p1 {
+          left: -3rem;
           top: 28rem; } }
     .composition__photo--p2 {
       right: 0;
       top: 2rem; }
       @media only screen and (max-width: 37.5em) {
         .composition__photo--p2 {
+          right: -6rem;
           top: 32rem; } }
     .composition__photo--p3 {
       left: 20%;
@@ -304,7 +309,7 @@ body {
   @media only screen and (max-width: 37.5em) {
     .footer {
       flex-direction: column;
-      height: 130vh; } }
+      height: 110vh; } }
   .footer__logo {
     width: 20%; }
     @media only screen and (max-width: 37.5em) {
@@ -421,6 +426,9 @@ body {
     color: #00143d;
     transition: transform .3s;
     box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 37.5em) {
+      .cards__card {
+        margin: 3rem .5rem; } }
     .cards__card:hover {
       transform: translateY(-1.5rem) scale(1.03); }
     .cards__card-icon {

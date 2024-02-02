@@ -13,11 +13,16 @@
         transition: all .2s;
         outline-offset: 2rem;
 
+        @media only screen and (max-width:37.5em){
+            width: 70%;
+        }
+
         &--p1 {
             left: 0;
             top: -2rem;
 
             @media only screen and (max-width:37.5em){
+                left: -3rem;
                 top: 28rem;
             }
         }
@@ -27,6 +32,7 @@
             top: 2rem;
 
             @media only screen and (max-width:37.5em){
+                right: -6rem;
                 top: 32rem;
             }
         }
