@@ -15,9 +15,37 @@
   <body>
     <header class="header">
       <nav class="nav">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="index.html"><li>Home</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#projects"><li>Projects</li></a>
+          </ul>
+        </div>
+
         <div class="nav__logo-box">
           <img src="img/logo.png" alt="Nexter logo" class="nav__logo" />
-          <h1>Virtous</h1>
+          <h1 class="heading-title">Virtous</h1>
         </div>
         <div class="nav__topbar">
           <ul class="nav__topbar--list">
@@ -154,7 +182,7 @@
       <div class="footer__logo">
         <div class="nav__logo-box mb-md">
           <img src="img/logo.png" alt="Nexter logo" class="nav__logo" />
-          <h1>Virtous</h1>
+          <h1 class="heading-title">Virtous</h1>
         </div>
         <h1 class="heading-small mb-md">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
