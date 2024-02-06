@@ -28,7 +28,7 @@ box-shadow: $shadow--nav;
     align-items: center;
     transition: all .2s ease-in-out;
 
-    @media only screen and (max-width:35.5em){
+    @media only screen and (max-width:25.5em){
         width: 40%;
         justify-content: left;
        }
@@ -38,7 +38,7 @@ box-shadow: $shadow--nav;
    &__logo{
        width: 6rem;
 
-       @media only screen and (max-width:30em){
+       @media only screen and (max-width:25.5em){
         width: 4rem;
        }
 
@@ -59,7 +59,7 @@ box-shadow: $shadow--nav;
        width: 65%;
     }
 
-    @media only screen and (max-width:35.5em){
+    @media only screen and (max-width:25.5em){
         width: 40%;
        }
 
@@ -72,7 +72,7 @@ box-shadow: $shadow--nav;
            padding: 0 4rem;
            list-style: none;
 
-           @media only screen and (max-width:35.5em){
+           @media only screen and (max-width:25.5em){
             display: none;
          }
    
@@ -136,7 +136,7 @@ box-shadow: $shadow--nav;
     margin-left: 2rem;
     border-radius: .6rem;
 
-    @media only screen and (max-width:30em){
+    @media only screen and (max-width:25.5em){
         margin-left: 1rem;
     }
 }
