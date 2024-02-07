@@ -1,0 +1,22 @@
+#languageSwitcher{
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3rem;
+}
+.lang-btn{
+background-color: transparent;
+border: none;
+padding-right: .5rem;
+color: $color-secondary;
+cursor: pointer;
+}
+
+.lang-btn:hover{
+    color: orangered;
+}
+
+.lang-btn .active-btn{
+    color: orangered;
+}

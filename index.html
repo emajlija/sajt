@@ -68,31 +68,20 @@
             <a href="#contact">Kontakt</a>
           </button>
 
-          <select id="language-select">
-            <option value="srp">srp</option>
-            <option value="en">eng</option>
-          </select>
+          <div id = "languageSwitcher">
+            <button class="lang-btn" onclick = "swithcLang('srp')"> srp </button>
+            <button class="lang-btn" onclick = "swithcLang('eng')"> eng </button>
         </div>
       </nav>
 
       <div class="header__heading">
-        <h1 class="heading-big mb-md">
-          <span class="srp activeLang"
-            >Lorem ipsum dolor sit amet consectetur</span
-          >
-          <span class="eng">LXXXXXXXXXXXXXXX</span>
+        <h1 class="heading-big mb-md" id="header title">
+          Lorem ipsum dolor sit amet consectetur
         </h1>
-        <h1 class="heading-small mb-md">
-          <span class="srp activeLang"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-            incidunt ducimus unde consectetur quisquam dolor amet dignissimos
-            minima</span
-          >
-          <span class="eng"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-            incidunt ducimus unde consectetur quisquam dolor amet dignissimos
-            minima</span
-          >
+        <h1 class="heading-small mb-md" id="header text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
+          incidunt ducimus unde consectetur quisquam dolor amet dignissimos
+          minima
         </h1>
         <button class="btn btn__lm"><a href="#about">Learn more</a></button>
       </div>
@@ -101,10 +90,13 @@
     <div class="about" id="about">
       <div class="heading-container">
         <div class="heading-container-window">
-          <h1 class="heading-container-window__medium__dark mb-md">
+          <h1
+            class="heading-container-window__medium__dark mb-md"
+            id="about title"
+          >
             Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
           </h1>
-          <h1 class="heading-container-window__small mb-md">
+          <h1 class="heading-container-window__small mb-md" id="about text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
             incidunt ducimus unde consectetur quisquam dolor amet dignissimos
             minima Lorem ipsum dolor sit amet consectetur adipisi
@@ -115,7 +107,7 @@
 
     <div class="about2" id="about2">
       <div class="about2__text">
-        <h1>
+        <h1 id="next about">
           Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum
           dolor sit amet consectetur adipisicing elit.
         </h1>
