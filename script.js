@@ -1,7 +1,29 @@
 const fixedNav = document.querySelector(".nav");
 const textType = document.querySelector(".text");
+const srpBtn = document.querySelector(".lang-btn__srp");
+const engBtn = document.querySelector(".lang-btn__eng");
 
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector(".loader").style.visibility = "visible";
+  } else {
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};
+
+srpBtn.style.color = "orange";
 window.addEventListener("scroll", fixNav);
+srpBtn.addEventListener("click", () => {
+  srpBtn.style.color = "orange";
+  engBtn.style.color = "#ab8566";
+});
+
+engBtn.addEventListener("click", () => {
+  engBtn.style.color = "orange";
+  srpBtn.style.color = "#ab8566";
+});
 
 function fixNav() {
   if (window.scrollY > fixedNav.offsetHeight + 150) {
