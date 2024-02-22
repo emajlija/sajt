@@ -12,7 +12,10 @@
         z-index: 10;
         transition: all .2s;
         outline-offset: 2rem;
-
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range:entry;
+       
         @media only screen and (max-width:37.5em){
             width: 70%;
         }
@@ -79,4 +82,9 @@
         transform: scale(.95);
     }
     //composition:hover composition__photo:not(:hover) {
+}
+
+@keyframes fade-in {
+    from{scale: .8; opacity: 0;}
+    to{scale: 1; opacity: 1;}
 }

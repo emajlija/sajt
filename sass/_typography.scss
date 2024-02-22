@@ -2,7 +2,9 @@
     font-size: 6rem;
     line-height: 1;
     text-align: left;
-    
+    animation: fade-in-text 2s linear forwards;
+    animation-timeline: view();
+    animation-range:entry;
 
     @media only screen and (max-width:25.5em){
         font-size: 5rem;
@@ -14,7 +16,9 @@
     font-weight: 400;
     line-height: 1;
     letter-spacing: 1.5px;
-   
+    animation: fade-in-text  linear forwards;
+    animation-timeline: view();
+    animation-range:entry;
     
 }
 
@@ -22,7 +26,10 @@
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
-
+    animation: fade-in-text linear forwards;
+    animation-timeline: view();
+    animation-range:entry ;
+   
    
     
 }
@@ -34,7 +41,9 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        
+        animation: fade-in-text linear forwards;
+        animation-timeline: view();
+        animation-range:entry;
 
         &-window{
             width: 60%;
@@ -91,4 +100,9 @@
 .mb-hg { margin-bottom: 8rem; }
 
 
+
+@keyframes fade-in-text{
+from{ opacity: 0; scale: .8;}
+to{opacity: 1; scale: 1;}
+} 
 
