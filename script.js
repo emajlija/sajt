@@ -2,6 +2,20 @@ const fixedNav = document.querySelector(".nav");
 const textType = document.querySelector(".text");
 const srpBtn = document.querySelector(".lang-btn__srp");
 const engBtn = document.querySelector(".lang-btn__eng");
+const hiddenEl = document.querySelectorAll(".hide");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("showing");
+    } else {
+      entry.target.classList.remove("showing");
+    }
+  });
+});
+
+hiddenEl.forEach((el) => observer.observe(el));
 
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {

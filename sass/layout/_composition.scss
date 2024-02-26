@@ -4,17 +4,17 @@
     z-index: 10;
     width: 50%;
 
+     
+
     &__photo {
         width: 55%;
         box-shadow:$shadow--natural;
         border-radius: 2px;
         position: absolute;
         z-index: 10;
-        transition: all .2s;
+        //transition: all .2s;
         outline-offset: 2rem;
-        animation: fade-in linear forwards;
-        animation-timeline: view();
-        animation-range:entry;
+      
        
         @media only screen and (max-width:37.5em){
             width: 70%;
@@ -27,6 +27,7 @@
         &--p1 {
             left: 0;
             top: -2rem;
+            
 
             @media only screen and (max-width:37.5em){
                 left: -3rem;
@@ -42,6 +43,7 @@
         &--p2 {
             right: 0;
             top: 2rem;
+            transition-delay: .25s;
 
             @media only screen and (max-width:37.5em){
                 right: -6rem;
@@ -57,6 +59,8 @@
         &--p3 {
             left: 20%;
             top: 10rem;
+            
+            transition-delay: .5s;
 
             @media only screen and (max-width:37.5em){
                 top: 40rem;
@@ -70,21 +74,18 @@
         }
 
         &:hover {
-            
-            transform: scale(1.05) translateY(-.5rem);
+            animation: onHover .5s ease-in-out forwards ;
             box-shadow: $shadow--natural;
             z-index: 20;
         }
 
     }
 
-    &:hover &__photo:not(:hover) {
-        transform: scale(.95);
-    }
+   
     //composition:hover composition__photo:not(:hover) {
 }
 
-@keyframes fade-in {
-    from{scale: .8; opacity: 0;}
-    to{scale: 1; opacity: 1;}
+@keyframes onHover {
+    from{transform: scale(1) }
+    to{transform: scale(1.05) }
 }

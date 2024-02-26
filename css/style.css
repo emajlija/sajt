@@ -39,13 +39,16 @@ body {
 .eng.activeLang {
   display: block; }
 
-@keyframes fade-in {
-  from {
-    scale: .8;
-    opacity: 0; }
-  to {
-    scale: 1;
-    opacity: 1; } }
+.hide {
+  opacity: 0;
+  scale: .8;
+  filter: blur(5px);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.showing {
+  opacity: 1;
+  scale: 1;
+  filter: blur(0); }
 
 .header-project {
   width: 100vw;
@@ -58,10 +61,7 @@ body {
 .heading-big {
   font-size: 6rem;
   line-height: 1;
-  text-align: left;
-  animation: fade-in-text 2s linear forwards;
-  animation-timeline: view();
-  animation-range: entry; }
+  text-align: left; }
   @media only screen and (max-width: 25.5em) {
     .heading-big {
       font-size: 5rem; } }
@@ -70,18 +70,12 @@ body {
   font-size: 2rem;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: 1.5px;
-  animation: fade-in-text  linear forwards;
-  animation-timeline: view();
-  animation-range: entry; }
+  letter-spacing: 1.5px; }
 
 .heading-title {
   font-size: 3rem;
   font-weight: 600;
-  text-align: center;
-  animation: fade-in-text linear forwards;
-  animation-timeline: view();
-  animation-range: entry; }
+  text-align: center; }
 
 .heading-container {
   width: 100vw;
@@ -89,10 +83,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  animation: fade-in-text linear forwards;
-  animation-timeline: view();
-  animation-range: entry; }
+  text-align: center; }
   .heading-container-window {
     width: 60%;
     display: flex;
@@ -109,7 +100,8 @@ body {
       font-size: 1.7rem;
       letter-spacing: 1.5px;
       width: 58%;
-      text-align: center; }
+      text-align: center;
+      transition-delay: .3s; }
       @media only screen and (max-width: 37.5em) {
         .heading-container-window__small {
           width: 65%; } }
@@ -139,14 +131,6 @@ body {
 
 .mb-hg {
   margin-bottom: 8rem; }
-
-@keyframes fade-in-text {
-  from {
-    opacity: 0;
-    scale: .8; }
-  to {
-    opacity: 1;
-    scale: 1; } }
 
 .contact {
   height: 70vh;
@@ -270,11 +254,7 @@ body {
     border-radius: 2px;
     position: absolute;
     z-index: 10;
-    transition: all .2s;
-    outline-offset: 2rem;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry; }
+    outline-offset: 2rem; }
     @media only screen and (max-width: 37.5em) {
       .composition__photo {
         width: 70%; } }
@@ -294,7 +274,8 @@ body {
           left: -10rem; } }
     .composition__photo--p2 {
       right: 0;
-      top: 2rem; }
+      top: 2rem;
+      transition-delay: .25s; }
       @media only screen and (max-width: 37.5em) {
         .composition__photo--p2 {
           right: -6rem;
@@ -305,7 +286,8 @@ body {
           right: -10rem; } }
     .composition__photo--p3 {
       left: 20%;
-      top: 10rem; }
+      top: 10rem;
+      transition-delay: .5s; }
       @media only screen and (max-width: 37.5em) {
         .composition__photo--p3 {
           top: 40rem; } }
@@ -314,19 +296,15 @@ body {
           left: 0%;
           top: 34rem; } }
     .composition__photo:hover {
-      transform: scale(1.05) translateY(-0.5rem);
+      animation: onHover .5s ease-in-out forwards;
       box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2);
       z-index: 20; }
-  .composition:hover .composition__photo:not(:hover) {
-    transform: scale(0.95); }
 
-@keyframes fade-in {
+@keyframes onHover {
   from {
-    scale: .8;
-    opacity: 0; }
+    transform: scale(1); }
   to {
-    scale: 1;
-    opacity: 1; } }
+    transform: scale(1.05); } }
 
 .about {
   height: 90vh;
@@ -340,17 +318,7 @@ body {
       height: 70vh; } }
 
 .about .heading-big {
-  color: #00143d;
-  animation: fade-in linear;
-  animation-timeline: view(100px); }
-
-@keyframes fade-in {
-  from {
-    scale: .8;
-    opacity: 0; }
-  to {
-    scale: 1;
-    opacity: 1; } }
+  color: #00143d; }
 
 .about2 {
   height: 90vh;
@@ -484,9 +452,7 @@ body {
   border-radius: 1rem;
   margin-top: 1rem;
   box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2);
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: entry; }
+  animation-delay: 1s; }
   @media only screen and (max-width: 37.5em) {
     .form {
       width: 60vw;
@@ -548,14 +514,6 @@ body {
       transform: translateY(2px);
       background-image: linear-gradient(#052b79 0%, #083fad 43%, #083fad 48%, #052b79 100%); }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    scale: .8; }
-  to {
-    opacity: 1;
-    scale: 1; } }
-
 .cards {
   width: 100%;
   display: flex;
@@ -573,11 +531,7 @@ body {
     background-size: cover;
     margin: 3rem;
     color: #00143d;
-    transition: transform .3s;
-    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2);
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry; }
+    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2); }
     @media only screen and (max-width: 37.5em) {
       .cards__card {
         margin: 3rem .5rem; } }
@@ -591,14 +545,12 @@ body {
       text-decoration: none;
       color: #ab8566;
       font-size: 1.5rem; }
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    scale: .8; }
-  to {
-    opacity: 1;
-    scale: 1; } }
+  .cards__card:nth-child(2) {
+    transition-delay: .2s; }
+  .cards__card:nth-child(3) {
+    transition-delay: .4s; }
+  .cards__card:nth-child(4) {
+    transition-delay: .6s; }
 
 .btn {
   width: 13rem;
