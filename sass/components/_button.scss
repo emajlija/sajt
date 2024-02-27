@@ -36,6 +36,10 @@
     &__lm{
      padding: 2rem;
      font-size: 1.5rem;
+     opacity:0;
+     transform: translateY(5rem);
+     animation: slideIn 1s ease-in forwards;
+     animation-delay: 2s;
     }
    }
 
@@ -46,4 +50,8 @@
    .btn a{
     text-decoration: none;
     color: inherit;
+   }
+
+   @keyframes slideIn {
+    to{opacity: 1; transform: translateY(0);}
    }

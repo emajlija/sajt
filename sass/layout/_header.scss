@@ -10,6 +10,7 @@
     color: azure;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 
     @media only screen and (max-width:37.5em){
         height: 80vh;
@@ -23,11 +24,8 @@
     &__heading{
         width: 60%;
         padding: 15rem;
-        opacity: 0;
-        transform: translateX(-100%);
-        animation: slide 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-       animation-delay: .5s;
-
+        z-index: 10;
+        
         @media only screen and (max-width:37.5em){
             width: 90%;
         }
@@ -40,13 +38,3 @@
     }
 }
 
-@keyframes slide {
-
-    70%{
-        transform:translateX(5%);
-    }
-    100%{
-        opacity: 1;
-        transform:translateX(0%);
-    }
-}
