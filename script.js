@@ -3,6 +3,7 @@ const textType = document.querySelector(".text");
 const srpBtn = document.querySelector(".lang-btn__srp");
 const engBtn = document.querySelector(".lang-btn__eng");
 const hiddenEl = document.querySelectorAll(".hide");
+const logo = document.querySelector(".logo-animation");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -77,3 +78,8 @@ function swithcLang(lang) {
     document.getElementById(key).innerHTML = languageContent[lang][key];
   }
 }
+
+window.addEventListener("scroll", function () {
+  var scrollPosition = window.scrollY;
+  logo.style.transform = "translateX(" + -scrollPosition * 1.5 + "px)";
+});

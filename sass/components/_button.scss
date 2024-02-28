@@ -34,8 +34,13 @@
     }
 
     &__lm{
+        width: auto;
      padding: 2rem;
-     font-size: 1.5rem;
+     font-size: 1.8rem;
+     background: transparent;
+     border: 2px solid $color-secondary;
+     border-radius: 4rem;
+     color:$color-secondary;
      opacity:0;
      transform: translateY(5rem);
      animation: slideIn 1s ease-in forwards;
